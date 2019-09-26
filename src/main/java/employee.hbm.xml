@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+	
+   <class name="com.h2kinfosys.hibernate.Employee" table="EMPLOYEE">
+   		<id name="id" column="emp_id" type="int" >
+   			 <generator class="native" />
+   		</id>
+		<property name="firstName" column="first_name" type="string" />
+		<property name="lastName" column="last_name" type="string" />
+		<property name="salary" column="salary" type="int" />
+	</class>
+   
+</hibernate-mapping>
+
+	<!-- 
+	create table EMPLOYEE (
+	   emp_id INT NOT NULL auto_increment,
+	   first_name VARCHAR(20) default NULL,
+	   last_name  VARCHAR(20) default NULL,
+	   salary     INT  default NULL,
+	   PRIMARY KEY (emp_id)
+);
+
+ -->
